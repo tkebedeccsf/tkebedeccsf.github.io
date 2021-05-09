@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--- Name: tsehay kebede
+                  Date: 12/12/18
+                 CNIT132-Final Project :- Creating a pages for Pacific trial resort using grid and 
+                            one external css-->
+   <title>Reservation at pacific trial resort</title>
+   <meta charset="utf-8">
+   <meta name="description" content="Filling the reservation forms are required in pacific Trail resort ">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="pacific.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <div id="wrapper">
+	  <div id="header">
+       <h1>Pacific Trails Resort</h1>
+	  </div>	  
+    <div id="nav">
+    <ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="yurts.html">Yurts</a></li>
+	<li><a href="activities.html">Activities</a></li>
+	<li><a href="reservations.html">Reservations</a></li>
+    </ul>
+  </div>
+  <div id="content">  
+	 <h2>Enjoy Nature in Luxury</h2>
+	
+ <form id="myform" method="post" action="contact.php" title="contact information form">
+   <fieldset>
+        <legend>User contact Information</legend>
+    <p>
+		<label for="firstname">First Name:</label> 
+		<input type="text" name="firstname" id="firstname" size="30" maxlength="50" placeholder="first name" required/>
+	</p>
+    <p>
+		<label for="lastname">Last   Name:</label>
+		<input type="text" id="lastname" name="lastname"  size ="30" maxlength="50" placeholder="last name" required>
+	</p>
+    <p>
+    <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"  size="30" placeholder="Example@gmail.com" required />
+	</p>
+    <p>
+<label for="phonenumber">Phone Number: </label>
+ <input type="tel" name="phonenumber" id="phonenumber"  required >
+	</p>
+
+    <p>
+<label for="guests">Number of Guests:</label>
+        <input type="number" name="guests" size="10"  value="1" id="guests" min="1" max="10"/>
+	</p>
+	   <p>
+<label for="message">Messages:</label>
+        <textarea rows="5" cols="40" id="message">comment box</textarea>
+	</p>
+   </fieldset>
+  <p >
+	<input id ="submit" type="submit" value="Submit Info" />
+	<input  id="reset" type="reset" value="RESET" />
+  </p>
+	  </form>
+	  <div id="contact">
+    <p><span class="resort">Pacific Trails Resort</span><br>
+     <span class="address">12010 Pacific Trails Road<br>
+     Zephyr, CA 94555<br>
+     1-888-555-5555</span></p>
+   </div>
+   <div id="footer">
+     <p>Copyright &copy; 2011 Pacific Trails Resort<br>
+         webmaster name</p>
+    </div>
+	 </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/*  Tsehay Kebede 
+    CNIT132-Final Project :-Creating a pages for Pacific trial resort using grid and one external css
+*/
+*{
+	box-sizing: border-box;
+}
+/** Q1**/
+body{
+	
+	background-color:white;
+	color:darkgray;
+	background-image: url(background.jpg);
+	font-family:Arial, Helvetica,sans-serif; 	
+	
+    }
+/**Q5,Q20**/
+#nav{
+	
+	background-color: skyblue;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+/*****Q20 ***/
+
+#nav ul { list-style-type: none;
+	      padding-left: 0;   
+          margin:0;}
+#nav ul li { margin-bottom: 2px; }
+#nav ul li a { text-decoration: none; }
+#nav ul li a:link{color: #000033; }
+#nav ul li a:visited{ color:#344873; }
+#nav ul li a:hover{ color:#FFFFFF; }
+
+/** Q4 & Q8**/
+h1{
+	font-family:Georgia, "Times New Roman", serif;	
+	color:white;
+	margin-bottom: 0px;	
+  }
+/**Q6 & Q19**/
+h2{
+	color:#3399CC;
+	font-family: Georgia, "Times New Roman", serif;
+	text-shadow: 5px 5px 5px #828282;
+  }
+/**Q7**/
+.resort
+     {
+	   color:darkblue;
+	   font-weight: bold;
+      }
+/***Q1S***/
+h3{
+	color:#000033;
+	font-family: Georgia, "Times New Roman", serif;
+  }
+
+/**Q10**/
+ul {
+	list-style-position: inside;
+}	  
+/***Q11***/
+.address{
+	font-size: 90%;
+}
+.em{
+	font-style: italic;
+}
+#contact
+   {
+	clear: left;
+    font-size: 90%;
+	
+   }
+/**Q13 ,Q14,Q15***/
+
+img
+  {
+	width:320px ;
+	height:250px ;
+	float:left;
+	padding-right: 5px;	
+	padding-bottom: 15px;
+   }
+
+/****Q12*****/
+#footer
+    {
+	
+	font-size: 75%;
+	font-style: italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+   }
+/***Q16***/
+@keyframes movingbird
+{
+	from {
+		left: 0;
+	    }
+	
+	to {
+		left: calc( 100% - 60px);
+	   }
+}
+.bird {
+	width: 68px;
+	height: 61px;
+	animation: movingbird 6s  1 forwards;
+	position: relative;
+   }
+
+#myform
+    {
+	 
+	  color:darkblue;
+	  font-weight: 400;
+	  background-color:azure;
+	  font-family:sans-serif;
+    }
+label { float: left; width: 140px; text-align: right; 
+        padding-left: 5px;}
+#submit{ margin-left: 110px; padding-bottom: 5px; }
+#reset { margin-left: 110px;  padding-bottom: 5px; }
+fieldset {background-color:beige;}
+   
+
+
+@media screen and (max-width:480px) 
+{
+ #wrapper
+  { display: grid;
+    grid-template-columns: auto; 
+	grid-template-rows: auto auto auto; 
+	width: 100%; 
+	background-color: white;
+    }
+  #header{
+	
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1; 
+	grid-row-end: 2;
+	background : #000033;
+    margin-left:0;
+   }
+	#nav{
+	
+	grid-column: 1 / 2; 
+	grid-row-start: 2; 
+	grid-row-end: 3;	
+	padding-top: 0;
+	margin: 0;
+    }
+	
+	#content {
+		
+	    grid-column-start: 1; 
+		grid-column-end: 2;  
+		grid-row-start: 3; 
+		grid-row-end: 4;
+	     
+        }
+
+	   #nav  ul {
+		display: block;
+		text-align: center;
+		list-style-type: none;
+		font-size: 1.2em;
+	  }
+	#nav ul li{margin-bottom: 3px;}
+   img
+  {
+	display: none;
+   }
+
+}
+/** desktop **/
+@media screen and (min-width:481px) 
+{ 
+	/** Q3 wrapper for desktop**/
+#wrapper
+  {
+	
+	width: 80%;
+	max-width: 960px;
+	background-color:white;
+	box-shadow: 10px 10px 10px #828282;
+	display: grid;
+    grid-template-columns: 15% auto; 
+	grid-template-rows: auto auto; 
+	margin: 0 auto;
+	margin-top: 15px;
+
+   }
+
+#header{
+	
+	grid-column-start: 1; 
+	grid-column-end: 3;
+	grid-row-start: 1; 
+	grid-row-end: 2;
+	background : #000033 url(sunset.jpg) no-repeat right;
+
+   }
+	
+#nav{
+	grid-column-start: 1; 
+	grid-column-end: 2; 
+	grid-row-start: 2; 
+	grid-row-end: 3;
+	
+	padding-left: 5px;
+	 
+    }
+#content{
+	     grid-column-start: 2; 
+	     grid-column-end:3;          
+	     padding-left: 5px;
+	     background-color: white;
+        }
+} 
+
